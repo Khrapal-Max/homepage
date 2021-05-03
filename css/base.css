@@ -31,7 +31,7 @@ body {
 }
 
 .contacts-name {
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     font-size: 22px;
     margin-top: 20px;
@@ -73,7 +73,7 @@ body {
 }
 
 .contacts-title {
-    color: #ffffff;
+    color: #fff;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -88,7 +88,7 @@ body {
 }
 
 .contacts-link-type {
-    color: #ffffff;
+    color: #fff;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -96,7 +96,7 @@ body {
 }
 
 .tech-skills-title {
-    color: #ffffff;
+    color: #fff;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -128,7 +128,7 @@ body {
 }
 
 .soft-skills-title {
-    color: #ffffff;
+    color: #fff;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -225,7 +225,7 @@ body {
 }
 
 .profession-divider {
-    color: #000000;
+    color: #000;
 }
 
 .professional-duties {
@@ -242,14 +242,14 @@ body {
 }
 
 .education-university {
-    color: #000000;
+    color: #000;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
 }
 
 .education-ITuniversity {
-    color: #000000;
+    color: #000;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -257,7 +257,7 @@ body {
 }
 
 .education-specialty {
-    color: #000000;
+    color: #000;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -271,5 +271,5 @@ body {
 }
 
 .education-divider {
-    color: #000000;
+    color: #000;
 }
