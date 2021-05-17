@@ -5,39 +5,95 @@
     box-sizing: border-box;
 }
 
-body {
+@page { margin: 0 }
+body { margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;}
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+/** Paper sizes **/
+
+body.A3               .sheet { width: 297mm; height: 419mm }
+body.A3.landscape     .sheet { width: 420mm; height: 296mm }
+body.A4               .sheet { width: 210mm; height: 296mm }
+body.A4.landscape     .sheet { width: 297mm; height: 209mm }
+body.A5               .sheet { width: 148mm; height: 209mm }
+body.A5.landscape     .sheet { width: 210mm; height: 147mm }
+body.letter           .sheet { width: 216mm; height: 279mm }
+body.letter.landscape .sheet { width: 280mm; height: 215mm }
+body.legal            .sheet { width: 216mm; height: 356mm }
+body.legal.landscape  .sheet { width: 357mm; height: 215mm }
+
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm auto;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+           body.A3.landscape { width: 420mm }
+  body.A3, body.A4.landscape { width: 297mm }
+  body.A4, body.A5.landscape { width: 210mm }
+  body.A5                    { width: 148mm }
+  body.letter, body.legal    { width: 216mm }
+  body.letter.landscape      { width: 280mm }
+  body.legal.landscape       { width: 357mm }
+}
+
+/*body {
     background: #f5f7fa;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
     font-family: Montserrat;
-}
+}*/
 
 .wrapper {
     background-color: #ffff;
     display: flex;
-    max-width: 1200px;
+    width: 1100px;
     margin: 0 auto;
+    height: auto;
     box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar {
     background: #1e2939;
-    height: 100%;
-    width: 370px;
+    width: auto;    
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 55px;
 }
 
 .contacts-name {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     font-size: 22px;
     margin-top: 20px;
 }
 
 .image {
+    width: 85%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -49,7 +105,7 @@ body {
     padding-top: 40px;
     padding-bottom: 5px;
     padding-left: 90px;
-    padding-right: 90px;
+    padding-right: 90px; 
 }
 
 .experience-container {
@@ -73,7 +129,7 @@ body {
 }
 
 .contacts-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -88,7 +144,7 @@ body {
 }
 
 .contacts-link-type {
-    color: #fff;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -96,7 +152,7 @@ body {
 }
 
 .tech-skills-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -128,7 +184,7 @@ body {
 }
 
 .soft-skills-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -225,7 +281,7 @@ body {
 }
 
 .profession-divider {
-    color: #000;
+    color: #000000;
 }
 
 .professional-duties {
@@ -242,14 +298,14 @@ body {
 }
 
 .education-university {
-    color: #000;
+    color: #000000;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
 }
 
 .education-ITuniversity {
-    color: #000;
+    color: #000000;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -257,7 +313,7 @@ body {
 }
 
 .education-specialty {
-    color: #000;
+    color: #000000;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -271,5 +327,5 @@ body {
 }
 
 .education-divider {
-    color: #000;
+    color: #000000;
 }
