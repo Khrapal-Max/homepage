@@ -12,13 +12,44 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="./img/photo192.png">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js").then(function(reg) {
+            console.log("register", reg);
+          }).catch(function(err) {
+            console.log("err", err);
+          });
+        }
+      </script>
+      <script>
+        window.addEventListener('beforeinstallprompt', function(e) {
+          // beforeinstallprompt Event fired
+    
+          // e.userChoice will return a Promise. 
+          // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+          e.userChoice.then(function(choiceResult) {
+    
+            console.log(choiceResult.outcome);
+    
+            if (choiceResult.outcome == 'dismissed') {
+              console.log('User cancelled home screen install');
+            } else {
+              console.log('User added to home screen');
+            }
+          });
+        });
+      </script>
+      <script>
+        fetch()
+      </script>
 </head>
 
 <body class="A4 landscape">
-    <main>      
-        <div class="page"> 
+    <main>
+        <div class="page">
             <div class="wrapper">
-            <article>
+                <article>
                     <!--sidebare container-->
                     <aside class="sidebar">
                         <img class="image" src="./img/me.png" alt="My photo" />
@@ -216,8 +247,8 @@
                         </div>
                     </section>
                 </article>
-            </div>   
-        </div>     
+            </div>
+        </div>
     </main>
 </body>
 
