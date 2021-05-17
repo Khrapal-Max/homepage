@@ -7,7 +7,7 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open(cacheName).then(function(cache) {
             return cache.addAll([
-                './',
+                'https://khrapal-max.github.io/homepage/',
                 './css/base.css',
             ]).then(function() {
                 self.skipWaiting();
