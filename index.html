@@ -1,252 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta property="og:title" content="Maksym Khrapal &mdash; Resume">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Author: M.G.Khrapal, Category: Resume">
-    <meta name="theme-color" content="#2d5450">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <meta name="description" content="Author: M.G.Khrapal, Category: Resume" />
     <title>Maksym Khrapal: Resume</title>
-
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="apple-touch-icon" href="./img/photo192.png">
-
-    <script>
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("sw.js").then(function(reg) {
-            console.log("register", reg);
-          }).catch(function(err) {
-            console.log("err", err);
-          });
-        }
-      </script>
-      <script>
-        window.addEventListener('beforeinstallprompt', function(e) {
-          // beforeinstallprompt Event fired
-    
-          // e.userChoice will return a Promise. 
-          // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
-          e.userChoice.then(function(choiceResult) {
-    
-            console.log(choiceResult.outcome);
-    
-            if (choiceResult.outcome == 'dismissed') {
-              console.log('User cancelled home screen install');
-            } else {
-              console.log('User added to home screen');
-            }
-          });
-        });
-      </script>
-</head>
-
-<body class="A4 landscape">
-    <main>
-        <div class="page">
-            <div class="wrapper">
-                <article>
-                    <!--sidebare container-->
-                    <aside class="sidebar">
-                        <img class="image" src="./img/me.png" alt="My photo" />
-                        <div class="contacts-name">
-                            <h2 class="name">Khrapal Maksym</h2>
-                        </div>
-                        <div class="contacts-container">
-                            <h3 class="contacts-title">Contacts:</h3>
-                            <div>
-                                <span class="contacts-link-type">Phone :</span>
-                                <a class="contacts-link" href="tel:380668756458">+38 066 875 64 58</a>
-                            </div>
-                            <div>
-                                <span class="contacts-link-type">Email:</span>
-                                <a class="contacts-link" href="mailto:khrapal_m_g@outlook.com"> Khrapal_M_G@outlook.com</a>
-                            </div>
-                            <div>
-                                <span class="contacts-link-type">Linkedin:</span>
-                                <a class="contacts-link" href="https://www.linkedin.com/in/maksym-khrapal-2867bba9"> Maksym Khrapal</a>
-                            </div>
-                        </div>
-                        <div class="tech-skills-container">
-                            <h3 class="tech-skills-title">Tech Skills</h3>
-                            <ul>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">С#</span>
-                                </li>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">.NET</span>
-                                </li>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">OOP</span>
-                                </li>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">SOLID</span>
-                                </li>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">Asp .Net Core MVC</span>
-                                </li>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">EF Core</span>
-                                </li>
-                                <li class="tech-skills-item">
-                                    <span class="tech-skills-text">SQL</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soft-skills-container">
-                            <h3 class="soft-skills-title">Soft Skills</h3>
-                            <ul>
-                                <li class="soft-skills-item">
-                                    <span class="soft-skills-text">The presence of leadership and management skills</span>
-                                </li>
-                                <li class="soft-skills-item">
-                                    <span class="soft-skills-text">Setting goals, planning and managing time</span>
-                                </li>
-                                <li class="soft-skills-item">
-                                    <span class="soft-skills-text">Responsibility for setting team tasks and achieving results</span>
-                                </li>
-                                <li class="soft-skills-item">
-                                    <span class="soft-skills-text">Ability to predict the emergence of problems thereby working ahead of the curve</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soft-skills-container">
-                            <h3 class="soft-skills-title">Language:</h3>
-                            <ul>
-                                <li class="soft-skills-item">
-                                    <span class="soft-skills-text">English - Pre-Intermediate.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </aside>
-                </article>
-                <article>
-                    <!--intro container-->
-                    <section>
-                        <div class="experience-container">
-                            <h3 class="about-me-title">Resume</h3>
-                            <span class="profession-title"></span>
-                            <p style="text-indent: 30px;">
-                                Hello. I have been specializing in the automation of service processes in retail for over 10 years. I actively study IT and other disciplines to build accurate, flexible, fast and simple business models to improve customer experience.
-                            </p>
-                        </div>
-                    </section>
-                    <!--work experience container-->
-                    <section>
-                        <div class="experience-container">
-                            <div>
-                                <h3 class="about-me-title">Work Experience</h3>
-                                <!--company 1-->
-                                <div>
-                                    <h3 class="profession-title">
-                                        Head of Customer Care
-                                    </h3>
-                                    <h3>
-                                        <a class="professional-company" href="https://allo.ua/">LLC Allo</a>
-                                    </h3>
-                                    <span class="professional-time">
-                                        Mar 2018 – Aug 2020
-                                        <span class="profession-divider">|</span> Ukraine
-                                    </span>
-                                    <ul class="professional-duties">
-                                        <li class="professional-duties-item">
-                                            Business process optimization.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Drafting legal services agreements (SLA).
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Organization of logistic schemes.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Quality control of service in the company.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Definition of metrics KPI, NPS, CSI.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Development of a service development strategy.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Automation of service processes in the company's software.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Development of software integration projects with partner databases.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Development and implementation of Service Desk for service processes.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--company 2-->
-                                <div>
-                                    <h3 class="profession-title">
-                                        Head of the regional service customer
-                                    </h3>
-                                    <h3>
-                                        <a class="professional-company" href="https://www.foxtrot.com.ua/">Group of companies Foxtrot</a>
-                                    </h3>
-                                    <span class="professional-time">
-                                        Aug 2011 – Dec 2017
-                                        <span class="profession-divider">|</span> Ukraine
-                                    </span>
-
-                                    <ul class="professional-duties">
-                                        <li class="professional-duties-item">
-                                            Preparing business plans.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Planning budget.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Analyzing data sets.
-                                        </li>
-                                        <li class="professional-duties-item">
-                                            Business correspondence.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!--education container-->
-                    <section>
-                        <div class="education-container">
-                            <div>
-                                <div>
-                                    <h3 class="about-me-title">Education</h3>
-                                </div>
-                                <p class="education-university">State Higher Education Institution «National Mining University (NMU)»</p>
-                                <p class="education-specialty">Specialist in Economics of enterprise <span class="education-time">Jun 2015<span class="education-divider">|</span> Ukraine</span>
-                            </div>
-                            <div>
-                                <div>
-                                    <h3 class="about-me-title">Additional Education, Courses</h3>
-                                </div>
-                                <div>
-                                    <p class="education-specialty">Course: C# Online Marathon</p>
-                                    <p class="education-ITuniversity">Softserve (IT Academy) <span class="education-time">October 2020 – December 2020<span class="education-divider">|</span> Ukraine</span>
-                                </div>
-                                <div>
-                                    <p class="education-specialty">Course: Elementary C#</p>
-                                    <p class="education-ITuniversity">Hillel (IT School) Dnipro  <span class="education-time">May 2020 – September 2020<span class="education-divider">|</span> Ukraine</span>
-                                </div>
-                                <div>
-                                    <p class="education-specialty">Course: OBJECT-ORIENTED PROGRAMMING IN C#</p>
-                                    <p class="education-ITuniversity">Softserve (IT Academy) <span class="education-time">Jul 2020 – Aug 2020<span class="education-divider">|</span> Ukraine</span>
-                                </div>
-                                <div>
-                                    <p class="education-specialty">Course: Introduction C#</p>
-                                    <p class="education-ITuniversity">Hillel (IT School) Dnipro <span class="education-time">Apr 2017 – Jun 2017<span class="education-divider">|</span> Ukraine</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </article>
-            </div>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 bg-info">
+          <div class="section">section 1</div>
+          <div class="section">section 2</div>
+          <div class="section">section 3</div>
+          <div class="section">section 4</div>
         </div>
-    </main>
-</body>
+        <div class="col-sm-8 bg-success ps-5">
+          <div>
+            <h4 class="my-3">Resume</h4>
+            <p>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHello. I have been specializing
+              in the automation of service processes in retail for over 10
+              years. I actively study IT and other disciplines to build
+              accurate, flexible, fast and simple business models to improve
+              customer experience.
+            </p>
+          </div>
 
+          <div>
+            <h4 class="mt-5">Work Experience</h4>
+            <br />
+            <h5>Head of Customer Care</h5>
+            <a href="https://allo.ua/">LLC Allo</a>
+            <p>Mar 2018 – Aug 2020 | Ukraine</p>
+            <ul>
+              <li>Business process optimization.</li>
+              <li>Drafting legal services agreements (SLA).</li>
+              <li>Organization of logistic schemes.</li>
+              <li>Quality control of service in the company.</li>
+              <li>Definition of metrics KPI, NPS, CSI.</li>
+              <li>Development of a service development strategy.</li>
+              <li>
+                Automation of service processes in the company's software.
+              </li>
+              <li>
+                Development of software integration projects with partner
+                databases.
+              </li>
+              <li>
+                Development and implementation of Service Desk for service
+                processes.
+              </li>
+            </ul>
+            <br />
+            <h5>Head of the regional service customer</h5>
+            <a href="https://www.foxtrot.com.ua/">Group of companies Foxtrot</a>
+            <p>Aug 2011 – Dec 2017 | Ukraine</p>
+            <ul>
+              <li>Preparing business plans.</li>
+              <li>Planning budget.</li>
+              <li>Analyzing data sets.</li>
+              <li>Business correspondence.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="mt-5">Education</h4>
+            <br>
+            <p>
+              <strong>
+                State Higher Education Institution «National Mining Universit
+                (NMU)»
+                <br />Specialist in Economics of enterprise</strong>
+              - Jun 2015| Ukraine
+            </p>
+          </div>
+          <div>
+            <h4 class="mt-5">Additional Education, Courses</h4>
+            <br>
+            <p>
+              <strong>
+                Course: C# Online Marathon
+                <br />Softserve (IT Academy)</strong>
+                October 2020 – December 2020| Ukraine
+            </p>
+            <br>
+            <p>
+              <strong>
+                Course: Elementary C#
+                <br />Hillel (IT School) Dnipro</strong>
+                May 2020 – September 2020| Ukraine
+            </p>
+            <br>
+            <p>
+              <strong>
+                Course: OBJECT-ORIENTED PROGRAMMING IN C#
+                <br />Softserve (IT Academy)</strong>
+                Jul 2020 – Aug 2020| Ukraine
+            </p>
+            <br>
+            <p>
+              <strong>
+                Course: Introduction C#
+                <br />Hillel (IT School) Dnipro</strong>
+                Apr 2017 – Jun 2017| Ukraine
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
