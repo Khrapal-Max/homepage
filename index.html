@@ -20,23 +20,25 @@
 
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js").then(function(reg) {
-          console.log("register", reg);
-        }).catch(function(err) {
-          console.log("err", err);
-        });
+        navigator.serviceWorker
+          .register("sw.js")
+          .then(function (reg) {
+            console.log("register", reg);
+          })
+          .catch(function (err) {
+            console.log("err", err);
+          });
       }
     </script>
     <script>
-      window.addEventListener('beforeinstallprompt', function(e) {
-        e.userChoice.then(function(choiceResult) {
-  
+      window.addEventListener("beforeinstallprompt", function (e) {
+        e.userChoice.then(function (choiceResult) {
           console.log(choiceResult.outcome);
-  
-          if (choiceResult.outcome == 'dismissed') {
-            console.log('User cancelled home screen install');
+
+          if (choiceResult.outcome == "dismissed") {
+            console.log("User cancelled home screen install");
           } else {
-            console.log('User added to home screen');
+            console.log("User added to home screen");
           }
         });
       });
@@ -46,83 +48,78 @@
     <div class="container-fluid">
       <div class="row">
         <div
-          class="col-sm-4 text-white"
-          style="background: #1e2939; font-size: 18px"
+          class="col-sm-4"
+          style="background: #1e2939; font-size: 18px; color: white"
         >
           <div class="text-center">
             <img
               class="img-fluid rounded mt-3"
-              src="./img/me.png"
+              src="./img/photo512.png"
               alt="My photo"
               ;
             />
             <h1 class="m-3">Khrapal Maksym</h1>
+            <br />
           </div>
-          <div class="m-2 m-lg-4">
+          <div class="mx-2 m-lg-4">
             <h3>Contacts</h3>
-            <div class="my-3 fw-light">
-              <a
-                class="text-reset text-decoration-none text-truncate"
-                href="tel:380668756458"
-              >
-                <i class="fas fa-phone me-4 me-md-2 me-lg-4 text-white-50"></i>+3 8 066 875 64 58</a
-              >
-            </div>
-            <div class="my-3 fw-light">
-              <a
-                class="text-reset text-decoration-none text-truncate"
-                href="mailto:khrapal_m_g@outlook.com"
-              >
-                <i class="fas fa-at me-4 me-md-2 me-lg-4 text-white-50"></i>khrapal_m_g@outlook.com</a
-              >
-            </div>
-            <div class="my-3 fw-light">
-              <a
-                class="text-reset text-decoration-none"
-                href="https://www.linkedin.com/in/maksym-khrapal-2867bba9"
-              >
-                <i class="fab fa-linkedin me-4 me-md-2 me-lg-4 text-white-50"></i>Linkedin</a
-              >
-            </div>
+            <ul class="list-unstyled my-4 mx-0">
+              <li class="list-item my-3">
+                <a
+                  class="text-reset text-decoration-none text-truncate d-flex"
+                  href="tel:380668756458">
+                  <i class="fas fa-phone me-4 me-md-2 me-lg-4 text-white-50"></i>
+                  +3 8 066 875 64 58</a>
+              </li>
+              <li class="list-item my-3">
+                <a class="text-reset text-decoration-none text-truncate"
+                  href="mailto:khrapal_m_g@outlook.com">
+                  <i class="fas fa-at me-4 me-md-2 me-lg-4 text-white-50"></i>
+                  khrapal_m_g@outlook.com</a>
+              </li>
+              <li class="list-item my-3">
+                <a class="text-reset text-decoration-none"
+                href="https://www.linkedin.com/in/maksym-khrapal-2867bba9">
+                <i class="fab fa-linkedin me-4 me-md-2 me-lg-4 text-white-50"></i>
+                Linkedin</a>
+              </li>
+            </ul>
           </div>
           <div class="m-2 m-lg-4">
             <h3>Soft skills</h3>
-            <ul class="list-group m-4 fw-light text-secondary">
-              <li class="list-item my-2 ">
-                <span class="text-white">The presence of leadership and management skills</span>
+            <ul class="list-group m-4">
+              <li class="list-item my-2">
+                The presence of leadership and management skills
               </li>
               <li class="list-item my-2">
-                <span class="text-white">Setting goals, planning and managing time</span>
+                Setting goals, planning and managing time
               </li>
               <li class="list-item my-2">
-                <span class="text-white">Responsibility for setting team tasks and achieving results</span>
+                Responsibility for setting team tasks and achieving results
               </li>
               <li class="list-item my-2">
-                <span class="text-white">Ability to predict the emergence of problems thereby working
-                ahead of the curve</span>
+                >Ability to predict the emergence of problems thereby working
+                ahead of the curve
               </li>
             </ul>
           </div>
           <div class="m-2 m-lg-4">
             <h3>Tech skills</h3>
-            <ul class="list-group m-4 fw-light text-secondary">
-              <li class="list-item my-2"><span class="text-white">
-               С#</span></li>
-              <li class="list-item my-2"><span class="text-white">.NET</span></li>
-              <li class="list-item my-2"><span class="text-white">OOP</span></li>
-              <li class="list-item my-2"><span class="text-white">SOLID</span></li>
-              <li class="list-item my-2"><span class="text-white">Asp .Net Core MVC</span></li>
-              <li class="list-item my-2"><span class="text-white">EF Core</span></li>
-              <li class="list-item my-2"><span class="text-white">SQL</span></li>
-              <li class="list-item my-2"><span class="text-white">Angular</span></li>
+            <ul class="list-group m-4">
+              <li class="list-item my-2">С#</li>
+              <li class="list-item my-2">.NET</li>
+              <li class="list-item my-2">OOP</li>
+              <li class="list-item my-2">SOLID</li>
+              <li class="list-item my-2">Asp .Net Core MVC</li>
+              <li class="list-item my-2">EF Core</li>
+              <li class="list-item my-2">SQL</li>
+              <li class="list-item my-2">Angular</li>
             </ul>
           </div>
           <div class="m-2 m-lg-4">
             <h3>Language</h3>
-            <ul class="list-group m-4 fw-light text-secondary">
-              <li class="list-item my-2">
-                <span class="text-white">English: Pre-Intermediate</span>
-              </li>
+            <ul class="list-group m-4">
+              <li class="list-item my-2">English: Pre-Intermediate</li>
             </ul>
           </div>
         </div>
@@ -130,11 +127,11 @@
           <div>
             <h2 class="mt-5 mb-3 fw-bolder">Resume</h2>
             <p class="text-left">
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHello. I specialize
-              in organizing and automating customer service processes. 
-              I am actively studing IT and other disciplines to
-              create accurate, flexible, fast and simple business models that
-              improve the quality of customer service.
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHello. I specialize in
+              organizing and automating customer service processes. I am
+              actively studing IT and other disciplines to create accurate,
+              flexible, fast and simple business models that improve the quality
+              of customer service.
             </p>
           </div>
           <div>
@@ -143,9 +140,9 @@
             <h3 class="fw-bold">Head of Customer Care</h3>
             <a
               href="https://allo.ua/"
-              class="text-reset fw-normal"
+              class="text-reset fs-5 fw-bolder"
               style="font-size: 18px"
-              ><h5>LLC Allo</h5></a
+              >LLC Allo</a
             >
             <p>Mar 2018 – Aug 2020 | Ukraine</p>
             <ul>
@@ -171,9 +168,9 @@
             <h3 class="fw-bold">Head of the regional service customer</h3>
             <a
               href="https://www.foxtrot.com.ua/"
-              class="text-reset fw-normal"
+              class="text-reset fs-5 fw-bolder"
               style="font-size: 18px"
-              ><h5>Group of companies Foxtrot</h5></a
+              >Group of companies Foxtrot</a
             >
             <p>Aug 2011 – Dec 2017 | Ukraine</p>
             <ul>
@@ -201,7 +198,7 @@
             <br />
             <p>
               <strong>
-                Sprint: Full-stack .NET 
+                Sprint: Full-stack .NET
                 <br />Binary Studio Academy</strong
               >
               Apr 2021 – Aug 2021 | Ukraine
