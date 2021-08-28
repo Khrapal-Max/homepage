@@ -1,11 +1,18 @@
 * {
   min-width: 320px;
   box-sizing: border-box;
+  box-shadow: 10px 5px 5px black;
+}
+
+@page {
+  size: A4;
+  margin: 0;
 }
 
 @media print {
-  body{
-      width: 21cm;
-      height: 29.7cm;
- } 
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
 }
