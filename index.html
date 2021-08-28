@@ -17,6 +17,30 @@
     />
     <meta name="description" content="Author: M.G.Khrapal, Category: Resume" />
     <title>Maksym Khrapal: Resume</title>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then(function(reg) {
+          console.log("register", reg);
+        }).catch(function(err) {
+          console.log("err", err);
+        });
+      }
+    </script>
+    <script>
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.userChoice.then(function(choiceResult) {
+  
+          console.log(choiceResult.outcome);
+  
+          if (choiceResult.outcome == 'dismissed') {
+            console.log('User cancelled home screen install');
+          } else {
+            console.log('User added to home screen');
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="container-fluid">
@@ -175,6 +199,13 @@
           <div>
             <h2 class="mt-5 fw-bolder">Additional Education, Courses</h2>
             <br />
+            <p>
+              <strong>
+                Sprint: Full-stack .NET 
+                <br />Binary Studio Academy</strong
+              >
+              Apr 2021 – Aug 2021 | Ukraine
+            </p>
             <p>
               <strong>
                 Course: C# Online Marathon
