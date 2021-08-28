@@ -2,3 +2,10 @@
   min-width: 320px;
   box-sizing: border-box;
 }
+
+@media print {
+  body{
+      width: 21cm;
+      height: 29.7cm;
+ } 
+}
