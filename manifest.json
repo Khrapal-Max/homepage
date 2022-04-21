@@ -6,7 +6,12 @@
     "background_color": "#cfe6e3",
     "theme_color": "#2d5450",
     "display": "standalone",
-    "icons": [
+    "icons": [{
+            "src": "./img/maskable_icon",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
         {
             "src": "./img/photo192.png",
             "sizes": "192x192",
