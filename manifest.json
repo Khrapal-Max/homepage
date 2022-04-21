@@ -1,7 +1,8 @@
 {
-    "name": "Khrapal Maksym: Resume",
+    "name": "Khrapal Maksym: CV",
     "short_name": "KM",
-    "start_url": ".",
+    "start_url": "https://khrapal-max.github.io/homepage/",
+    "scope": "https://khrapal-max.github.io/homepage/",
     "background_color": "#cfe6e3",
     "theme_color": "#2d5450",
     "display": "standalone",
